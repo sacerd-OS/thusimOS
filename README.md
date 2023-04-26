@@ -6,7 +6,7 @@ The idea behind thusimOS is a hackathon kernel -- ie. it is the result of the qu
 ## Why a kernel?
 Because I fucking love operating systems and need to write kernels to sustain myself. Modifying someone else's kernel doesn't cut it, and I can't do dumb Greek puns.
 
-## Resources used.
+## Resources used?
 Sure:
 - **[OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/)** - Useful for theoretical grounding in UNIX based OS
 - **[OSDev](https://wiki.osdev.org/Expanded_Main_Page)** - Good resource for OS development, but the users are annoying Linux bros.
