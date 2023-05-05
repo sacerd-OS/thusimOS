@@ -10,6 +10,25 @@ uint16_t vga_entry(unsigned char uc, uint8_t color) {
 	return (uint16_t) uc | (uint16_t) color << 8;
 }
 
+void t_scroll(size_t line) {
+	int loop;
+	char c;
+ 
+	for(loop = line * (VGA_WIDTH * 2) + 0xB8000; loop < VGA_WIDTH * 2; loop++) {
+		c = *(int*)loop;
+		*((int*)loop - (VGA_WIDTH * 2)) = c;
+	}
+}
+ 
+void t_delete_last_line(void) {
+	int x, *ptr;
+ 
+	for(x = 0; x < VGA_WIDTH * 2; x++) {
+		ptr = (int*)0xB8000 + (VGA_WIDTH * 2) * (VGA_HEIGHT - 1) + x;
+		*ptr = 0;
+	}
+}
+
 void t_initialize(enum vga_color fg, enum vga_color bg){
 	row = 0;
 	column = 0;

@@ -12,7 +12,7 @@ OFILES="obj/kernel.o obj/puts.o obj/printf.o obj/putchar.o obj/strlen.o obj/term
 
 $COMPILER -c $KERNEL/kernel.c -o obj/kernel.o $CFLAGS
 
-$COMPILER -c $STDLIB/atoi.c -o obj/atoi.o $CFLAGS
+#$COMPILER -c $STDLIB/atoi.c -o obj/atoi.o $CFLAGS
 
 $COMPILER -c $STDIO/puts.c -o obj/puts.o $CFLAGS
 $COMPILER -c $STDIO/printf.c -o obj/printf.o $CFLAGS

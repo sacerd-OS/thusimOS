@@ -32,4 +32,6 @@ uint16_t vga_entry(unsigned char uc, uint8_t color);
 void t_initialize(enum vga_color fg, enum vga_color bg);
 void vga_putentryat(char c, uint8_t color, size_t x, size_t y);
 void t_setcolor(uint8_t color);
+void t_scroll(size_t line);
+void t_delete_last_line(void);
 #endif

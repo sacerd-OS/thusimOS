@@ -2,6 +2,7 @@
 #include "../etc/terminal.h"
 
 int putchar(const char c) {
+	size_t line = 0;
 	if(c == '\0') return -1;
     if(c == '\n'){
 	  column = 0;
@@ -14,7 +15,14 @@ int putchar(const char c) {
 	if (++column == VGA_WIDTH) {
 		column = 0;
 		if (++row == VGA_HEIGHT)
-			row = 0;
+		{
+			for(line = 1; line <= VGA_HEIGHT - 1; line++)
+			{
+				t_scroll(line);
+			}
+			t_delete_last_line();
+			row = VGA_HEIGHT - 1;
+		}
 	}
 	return 1;
 }

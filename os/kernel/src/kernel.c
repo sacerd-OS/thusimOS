@@ -15,4 +15,8 @@ void k_main(void){
   printf("zero %d\n", 0);
   printf("negative %d\n", -1);
   printf("hex %x", 450);
+
+  for(int i = 0; i < 100; i++){
+    puts("squirrelly u cant nut");
+  }
 } 
