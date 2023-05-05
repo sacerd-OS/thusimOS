@@ -16,7 +16,17 @@ void k_main(void){
   printf("negative %d\n", -1);
   printf("hex %x", 450);
 
-  for(int i = 0; i < 100; i++){
+  for(int i = 0; i < 7; i++){
     puts("squirrelly u cant nut");
+    puts("theres no squirrelling back");
+  }
+  puts("3");
+  puts("2");
+  puts("1");
+  puts("1");
+
+    for(int i = 0; i < 7; i++){
+    puts("squirrelly u cant nut");
+    puts("theres no squirrelling back");
   }
 } 

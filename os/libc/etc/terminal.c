@@ -11,21 +11,17 @@ uint16_t vga_entry(unsigned char uc, uint8_t color) {
 }
 
 void t_scroll(size_t line) {
-	int loop;
-	char c;
- 
-	for(loop = line * (VGA_WIDTH * 2) + 0xB8000; loop < VGA_WIDTH * 2; loop++) {
-		c = *(int*)loop;
-		*((int*)loop - (VGA_WIDTH * 2)) = c;
+	for(size_t x = 0; x < VGA_WIDTH; x++){ // for all in row
+		const size_t initial_index = (line) * VGA_WIDTH + x; // get index of char on line
+		char initial_char = (char)(terminal_buffer[initial_index] & 0x00FF); // get actual value
+		vga_putentryat(initial_char, terminal_color, x, line - 1); // move char up one line
 	}
 }
  
 void t_delete_last_line(void) {
-	int x, *ptr;
- 
-	for(x = 0; x < VGA_WIDTH * 2; x++) {
-		ptr = (int*)0xB8000 + (VGA_WIDTH * 2) * (VGA_HEIGHT - 1) + x;
-		*ptr = 0;
+	const size_t FINAL_ROW = VGA_HEIGHT - 1;
+	for (size_t x = 0; x < VGA_WIDTH; x++) {// for all in row
+		vga_putentryat(' ', terminal_color, x, FINAL_ROW);
 	}
 }
 
