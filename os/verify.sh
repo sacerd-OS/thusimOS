@@ -5,8 +5,8 @@ if grub-file --is-x86-multiboot thusimos.bin; then
   cp thusimos.bin ../os/iso/boot/thusimos.bin
   cd ../os
   grub-mkrescue -o ../bin/thusimos.iso iso
-  
-  qemu-system-i386 -cdrom ../bin/thusimos.iso
+  cd ../bin
+  qemu-system-i386 -cdrom thusimos.iso
 else
   echo error: not verified
 fi
