@@ -10,8 +10,7 @@ static void print(const char* data) {
 		putchar(data[i]);
 }
 
-void reverse(char str[], int length)
-{
+void reverse(char str[], int length){
     int start = 0;
     int end = length - 1;
     while (start < end) {

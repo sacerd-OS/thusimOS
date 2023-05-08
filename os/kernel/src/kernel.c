@@ -9,24 +9,10 @@
 void k_main(void){
   t_initialize(VGA_COLOR_LIGHT_MAGENTA, VGA_COLOR_BLACK);
   puts("hello squirrel\nit's squirrel time :3");
-  printf("string %s\n", "squirrely");
-  printf("char %c\n", 'c');
-  printf("int %d\n", 45);
-  printf("zero %d\n", 0);
-  printf("negative %d\n", -1);
-  printf("hex %x", 450);
-
-  for(int i = 0; i < 7; i++){
-    puts("squirrelly u cant nut");
-    puts("theres no squirrelling back");
-  }
-  puts("3");
-  puts("2");
-  puts("1");
-  puts("1");
-
-    for(int i = 0; i < 7; i++){
-    puts("squirrelly u cant nut");
-    puts("theres no squirrelling back");
-  }
+  printf("printf with string: %s\n", "squirrely");
+  printf("printf with char: %c\n", 'c');
+  printf("printf with int: %d\n", 45);
+  printf("printf with int case zero: %d\n", 0);
+  printf("printf with int case negative: %d\n", -1);
+  printf("printf with hex: %x", 450);
 } 
