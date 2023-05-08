@@ -7,7 +7,10 @@
 #include <stdint.h>
 
 void k_main(void){
+  // initialize
   t_initialize(VGA_COLOR_LIGHT_MAGENTA, VGA_COLOR_BLACK);
+
+  // print tests
   puts("hello squirrel\nit's squirrel time :3");
   printf("printf with string: %s\n", "squirrely");
   printf("printf with char: %c\n", 'c');

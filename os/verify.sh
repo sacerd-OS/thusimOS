@@ -1,3 +1,4 @@
+#!/bin/sh
 cd ../bin
 
 if grub-file --is-x86-multiboot thusimos.bin; then
