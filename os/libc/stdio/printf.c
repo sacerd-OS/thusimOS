@@ -29,7 +29,6 @@ void reverse(char str[], int length){
 
 char* int2ascii(int num, char* str, int base){
     int i = 0;
-    bool isNegative = false;
  
     // Handle 0 explicitly
     if (num == 0) {
@@ -39,10 +38,9 @@ char* int2ascii(int num, char* str, int base){
     }
  
     // negative
-    if (num < 0 && base == 10) {
-        isNegative = true;
+    if (num < 0 && base == 10)
         num = -num;
-    }
+
     // Process individual digits
     while (num != 0) {
         int rem = num % base;
@@ -50,7 +48,8 @@ char* int2ascii(int num, char* str, int base){
         num = num / base;
     }
 
-    if (isNegative)
+    // negative part 2
+    if (num < 0 && base == 10)
         str[i++] = '-';
  
     str[i] = '\0';
@@ -88,7 +87,7 @@ size_t printf(const char* restrict format, ...){
                 break;
 
                 case 'x': ; 
-                 char strrr[256];
+                char strrr[256];
                 int hex = va_arg(ag, int);
                 print(int2ascii(hex,strrr, 16));
                 written+=strlen(strr);// per printf spec

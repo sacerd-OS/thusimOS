@@ -1,7 +1,7 @@
 #include "../string/string.h"
 #include "stdlib.h"
 
-int char2dig(char *c){
+int char2dig(char c){
   if (c >= '0' && c <= '9')
     return c - '0';
   else 
@@ -9,15 +9,15 @@ int char2dig(char *c){
 }
 
 int pow10(int pow){
-    if(pow = 0)
+    int ret = 10;
+    
+    if(pow == 0)
         return 1;
 
-    int ret = 10;
-
     for(int i = 1; i < pow; i++)
-        pow *=10;
+        ret *=10;
 
-    return pow;
+    return ret;
 }
 
 // bad code

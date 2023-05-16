@@ -1,6 +1,6 @@
  #!/bin/bash
  # I couldn't fucking figure out Make. Is that embarassing? Yessssss.
-CFLAGS="-g -std=gnu99 -ffreestanding -Wall -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -Winline -Wno-long-long -Wstrict-prototypes"
+CFLAGS="-g -std=c99 -ffreestanding -Wall -Wextra -pedantic -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls -Wnested-externs -Winline -Wno-long-long -Wstrict-prototypes"
 OBJDIR=./obj
 STDIO=./libc/stdio
 STDLIB=./libc/stdlib
@@ -12,7 +12,7 @@ OFILES="obj/kernel.o obj/puts.o obj/printf.o obj/putchar.o obj/strlen.o obj/term
 
 $COMPILER -c $KERNEL/kernel.c -o obj/kernel.o $CFLAGS
 
-#$COMPILER -c $STDLIB/atoi.c -o obj/atoi.o $CFLAGS
+$COMPILER -c $STDLIB/atoi.c -o obj/atoi.o $CFLAGS
 
 $COMPILER -c $STDIO/puts.c -o obj/puts.o $CFLAGS
 $COMPILER -c $STDIO/printf.c -o obj/printf.o $CFLAGS
