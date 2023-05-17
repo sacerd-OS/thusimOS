@@ -6,8 +6,22 @@ The idea behind thusimOS is a hackathon kernel -- ie. it is the result of the qu
 ## Why a kernel?
 Because I fucking love operating systems and need to write kernels to sustain myself. Modifying someone else's kernel doesn't cut it, and I can't do dumb Greek puns if I fix xv6.
 
+## Repo Structure
+- ``bin``: Contains the ISO and BIN file for the thusimOS binary
+- ``docs/``: Function level documentation
+- ``cross-compiler/``: Script for running the cross-compiler for GCC, GDB, and binutils
+- ``os``: OS source files
+  - ``os/iso``: Contains the files for compiling the ISO compatable w/ GRUB
+  - ``os/kernel``: Kernel source files
+  - ``os/libc``: Contains my version of libc
+  - ``os/obj``: Contains object files. Maybe I should've gitignored these lol
+
 ## Resources used?
 Sure:
 - **[OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/)** - Useful for theoretical grounding in UNIX based OS
 - **[OSDev](https://wiki.osdev.org/Expanded_Main_Page)** - Good resource for OS development, but the users are annoying Linux bros.
 - **[OSDev Book](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)** - Extremely amazing resource for OSdev.
+
+## Video
+I'm removing this after peer grading is done. Sorry it's so long, this project is a mouthful.
+https://www.youtube.com/watch?v=IHDJseKlUVE&feature=youtu.be
