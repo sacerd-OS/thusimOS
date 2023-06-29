@@ -21,7 +21,3 @@ Sure:
 - **[OSTEP](https://pages.cs.wisc.edu/~remzi/OSTEP/)** - Useful for theoretical grounding in UNIX based OS
 - **[OSDev](https://wiki.osdev.org/Expanded_Main_Page)** - Good resource for OS development, but the users are annoying Linux bros.
 - **[OSDev Book](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)** - Extremely amazing resource for OSdev.
-
-## Video
-I'm removing this after peer grading is done. Sorry it's so long, this project is a mouthful.
-https://www.youtube.com/watch?v=IHDJseKlUVE&feature=youtu.be
